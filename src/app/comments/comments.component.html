@@ -1,0 +1,43 @@
+<ng-progress></ng-progress>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <ol class="breadcrumb">  
+                <li><a [routerLink]="['/posts']">Tous les posts</a></li>
+                <li class="active">Commentaires du post {{idPost}}</li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h3 class="card-title">{{postInfo.title}}</h3>
+                        <p class="card-text">{{postInfo.body}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Les différents commentaires</h2><br>
+            </div>
+        </div>
+        <div class="row">
+            <div *ngFor="let comment of allCommentsOfPost">
+                <div class="col-sm-1">
+                    <div class="thumbnail">
+                        <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>{{comment.name}}</strong> <span class="text-muted">{{comment.name}}</span>
+                        </div>
+                        <div class="panel-body">{{comment.body}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="album">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">LISTE DES ALBUMS</h4>
+                        <p class="category">Albums du service http://jsonplaceholder.typicode.com</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>userId</th>
+                                    <th>id</th>
+                                    <th>title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let album of albums">
+                                    <td>{{album.userId}}</td>
+                                    <td>{{album.id}}</td>
+                                    <td>{{album.title}}</td>
+                                    <a [routerLink]="['/albums/', album.id]">
+                                        <i class="fa fa-eye view-icon" aria-hidden="true"></i>
+                                    </a>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

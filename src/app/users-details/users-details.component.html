@@ -1,0 +1,101 @@
+<ng-progress></ng-progress>
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <ol class="breadcrumb">  
+                <li><a [routerLink]="['/users']">Tous les utilisateur</a></li>
+                <li class="active">Profil utilisateur {{user.name}}</li>
+            </ol>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Id</label>
+                                        <input type="text" class="form-control" placeholder="Id" value="{{user.id}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" placeholder="Name" value="{{user.name}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" placeholder="Username" value="{{user.username}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" placeholder="Email" value="{{user.email}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" placeholder="Street" value="{{user.street}}&nbsp;{{user.address.suite}}&nbsp;{{user.address.city}}&nbsp;{{user.address.zipcode}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control" placeholder="Phone" value="{{user.phone}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Website</label>
+                                        <input type="text" class="form-control" placeholder="Website" value="{{user.website}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Company Name</label>
+                                        <input type="text" class="form-control" placeholder="Company" value="{{user.company.name}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Company CatchPhrase</label>
+                                        <input type="text" class="form-control" placeholder="Company" value="{{user.company.catchPhrase}}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Company Bs</label>
+                                        <input type="text" class="form-control" placeholder="Company" value="{{user.company.bs}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</div>

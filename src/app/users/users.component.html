@@ -1,0 +1,45 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">LISTE DES UTILISATEURS</h4>
+                        <p class="category">Utilisateurs du service http://jsonplaceholder.typicode.com</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>name</th>
+                                    <th>username</th>
+                                    <th>email</th>
+                                    <th>address</th>
+                                    <th>phone</th>
+                                    <th>website</th>
+                                    <th>company</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of users">
+                                    <td>{{user.id}}</td>
+                                    <td>{{user.name}}</td>
+                                    <td>{{user.username}}</td>
+                                    <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+                                    <td>{{user.address.street}}&nbsp;{{user.address.suite}}&nbsp;{{user.address.city}}&nbsp;{{user.address.zipcode}}</td>
+                                    <td><a href="tel:{{user.phone}}">{{user.phone}}</a></td>
+                                    <td><a href="http://{{user.website}}" target="_blank">{{user.website}}</a></td>
+                                    <td>{{user.company.name}}&nbsp;{{user.company.catchPhrase}}</td>
+                                    <a [routerLink]="['/users/', user.id]">
+                                        <i class="fa fa-eye view-icon" aria-hidden="true"></i>
+                                    </a>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
